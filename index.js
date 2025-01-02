@@ -10,5 +10,5 @@ app.get('/',(req,res)=>{
     res.send("Hello world")
 })
 app.listen(5000,()=>{
-    console.log("App listening on the port number 3000")
+    console.log("App listening on the port number 5000")
 })

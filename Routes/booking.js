@@ -5,16 +5,16 @@ const databaseName='restaurant_bookings';
 
 try {
     service.setServiceUrl(process.env.URL)
-    console.log("Connected to Database")
+  
 } catch (error) {
-    console.log(error)
+    throw error
 }
 router.get('/getbookings',async(req,res)=>{
     const docs=await service.postAllDocs({
         db:databaseName,
         includeDocs:true
     })
-    console.log(docs)
+ 
     res.send(docs.result.rows)
 })
 router.post('/book',async(req,res)=>{
