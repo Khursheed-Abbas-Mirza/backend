@@ -12,4 +12,4 @@ app.get('/',(req,res)=>{
     res.render("index.ejs");
 })
 
-module.export=app
+module.exports=app
