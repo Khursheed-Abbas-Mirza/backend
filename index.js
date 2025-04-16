@@ -9,7 +9,7 @@ app.use(cors())
 app.use(bodyparser.json())
 app.use('/api',bookroute)
 app.get('/',(req,res)=>{
-    res.render("index.ejs");
+    res.sendFile(__dirname+"/views"+"/index.html")
 })
-
+app.listen(5000,()=>{console.log("Serever started")})
 module.exports=app
