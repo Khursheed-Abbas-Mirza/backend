@@ -1,10 +1,12 @@
 const express=require('express')
 const app=express()
 const bodyparser=require('body-parser')
+const path=require("path")
 const bookroute=require('./Routes/booking')
 const cors=require('cors')
 app.set("view engine","ejs")
-app.use("/asset",express.static('public'));
+// app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors())
 app.use(bodyparser.json())
 app.use('/api',bookroute)
